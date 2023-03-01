@@ -1,5 +1,6 @@
 import Button from "../button/Button"
 import React, {useState} from 'react'
+import './form.css'
 
 const Form = ({ todos, setTodos }) => {
     const [title, setTitle] = useState('')
@@ -24,11 +25,15 @@ const Form = ({ todos, setTodos }) => {
     }
 
     return (
-        <div>
-        title :&nbsp;<input type='text' value ={title} onChange={titleHandler}/>
-        contents :&nbsp;<input type='text' value ={contents} onChange={contentsHandler}/>
-        <Button addBtnHandler={addBtnHandler}>ADD</Button>
-      </div>
+    <div className="add-form">
+        <div className="input-group">
+            <label className="form-label">title :&nbsp;</label>
+            <input className="add-input" type='text' value ={title} onChange={titleHandler}/>
+            <label className="form-label">contents :&nbsp;</label>
+            <input className="add-input" type='text' value ={contents} onChange={contentsHandler}/>
+            <Button addBtnHandler={addBtnHandler}>ADD</Button>
+        </div>
+    </div>
     )
 }
 

@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
-import Form from './components/form/form';
+import Form from './components/form/Form';
 import Header from './components/header/Header';
 import { Working, Done } from './components/working/Working';
+import './App.css';
 
 const App = () => {
   const INITIAL_STATE = [
@@ -19,7 +20,7 @@ const App = () => {
   let [todos, setTodos] = useState(INITIAL_STATE);
 
   return (
-    <div>
+    <div className="layout">
       <Header/>
       <Form todos={todos} setTodos={setTodos}/>
       <Working todos={todos} setTodos={setTodos}/>
