@@ -73,26 +73,3 @@ const Done = ({ todos, setTodos }) => {
 }
 
 export { Working, Done }
-
-// export default BigWorking
-
-
-
-// const Done = ({ todos, delBtn, chgBtn }) => {
-
-//     return (
-//         <div>
-//         <h2>DONE</h2>
-//         {todos.map(todo => {
-//           if(todo.isDone)
-//           return(
-//             <div key={todo.id}>
-//               {todo.title} : {todo.contents}
-//               <button onClick={()=>delBtn(todo.id)}>del</button>
-//               <button onClick={()=>chgBtn(todo)}>com</button>
-//             </div>
-//           )
-//         })}
-//       </div>
-//     )
-// }
